@@ -20,15 +20,12 @@ import java.util.List;
  */
 
 public class ApiViewModel extends ViewModel {
-    private static final String TAG = ApiViewModel.class.getSimpleName();
-
     private RestApiClient mRestApiClient;
-    private LiveData<List<Actor>> actorList;
     private MediatorLiveData<List<Actor>> mMediatorLiveData;
 
     public ApiViewModel() {
         mRestApiClient = new RestApiClient();
-        mMediatorLiveData =new MediatorLiveData<>();
+        mMediatorLiveData = new MediatorLiveData<>();
     }
 
     public LiveData<List<Actor>> getTopActorList() {
