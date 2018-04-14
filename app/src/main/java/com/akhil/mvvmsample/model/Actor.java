@@ -3,7 +3,7 @@ package com.akhil.mvvmsample.model;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by e on 08-04-2018.
+ * Created by Akhil on 08-04-2018.
  */
 
 public class Actor {

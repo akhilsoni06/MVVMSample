@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 /**
- * Created by e on 09-04-2018.
+ * Created by Akhil on 09-04-2018.
  */
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemHolder> {
