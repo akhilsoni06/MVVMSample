@@ -1,6 +1,6 @@
 package com.akhil.mvvmsample.interactor;
 
-import com.akhil.mvvmsample.model.Actor;
+import com.akhil.mvvmsample.model.Movies;
 
 import java.util.List;
 
@@ -14,5 +14,5 @@ import retrofit2.http.GET;
 public interface ApiInterface {
 
     @GET("marvel")
-    Call<List<Actor>> getTopActorList();
+    Call<List<Movies>> getTopActorList();
 }

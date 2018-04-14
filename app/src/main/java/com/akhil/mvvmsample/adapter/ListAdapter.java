@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.akhil.mvvmsample.R;
-import com.akhil.mvvmsample.model.Actor;
+import com.akhil.mvvmsample.model.Movies;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -20,10 +20,10 @@ import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemHolder> {
 
-    private List<Actor> mActorList;
+    private List<Movies> mMoviesList;
 
-    public ListAdapter(List<Actor> list) {
-        this.mActorList = list;
+    public ListAdapter(List<Movies> list) {
+        this.mMoviesList = list;
     }
 
     @Override
@@ -35,15 +35,15 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemHolder> {
 
     @Override
     public void onBindViewHolder(ItemHolder holder, int position) {
-        Actor actor = mActorList.get(position);
-        holder.mActorName.setText(actor.getName());
-        holder.mBio.setText(Html.fromHtml(actor.getBio()));
-        Picasso.with(holder.itemView.getContext()).load(actor.getImageurl()).into(holder.mActorImg);
+        Movies movies = mMoviesList.get(position);
+        holder.mActorName.setText(movies.getName());
+        holder.mBio.setText(Html.fromHtml(movies.getBio()));
+        Picasso.with(holder.itemView.getContext()).load(movies.getImageurl()).into(holder.mActorImg);
     }
 
     @Override
     public int getItemCount() {
-        return mActorList.size();
+        return mMoviesList.size();
     }
 
     public static class ItemHolder extends RecyclerView.ViewHolder {

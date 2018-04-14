@@ -4,9 +4,8 @@ import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.util.Log;
 
-import com.akhil.mvvmsample.model.Actor;
+import com.akhil.mvvmsample.model.Movies;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -35,18 +34,18 @@ public class RestApiClient {
     }
 
 
-    public LiveData<List<Actor>> getActorList() {
-        final MutableLiveData<List<Actor>> liveData = new MutableLiveData<>();
+    public LiveData<List<Movies>> getActorList() {
+        final MutableLiveData<List<Movies>> liveData = new MutableLiveData<>();
         ApiInterface apiInterface = RestApiClient.getClient().create(ApiInterface.class);
-        apiInterface.getTopActorList().enqueue(new Callback<List<Actor>>() {
+        apiInterface.getTopActorList().enqueue(new Callback<List<Movies>>() {
             @Override
-            public void onResponse(Call<List<Actor>> call, Response<List<Actor>> response) {
+            public void onResponse(Call<List<Movies>> call, Response<List<Movies>> response) {
                 Log.d(TAG, "size=" + response.body().size());
                 liveData.setValue(response.body());
             }
 
             @Override
-            public void onFailure(Call<List<Actor>> call, Throwable t) {
+            public void onFailure(Call<List<Movies>> call, Throwable t) {
                 Log.d(TAG, t.getLocalizedMessage());
             }
         });
