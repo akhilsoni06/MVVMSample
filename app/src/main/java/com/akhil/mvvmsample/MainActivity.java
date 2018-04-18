@@ -53,7 +53,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setAdapter(List<Movies> moviesList) {
-        mListAdapter = new ListAdapter(moviesList);
-        mRecycleListView.setAdapter(mListAdapter);
+        if(moviesList!=null && moviesList.size()>0)
+        {
+            mListAdapter = new ListAdapter(moviesList);
+            mRecycleListView.setAdapter(mListAdapter);
+        }
     }
 }
