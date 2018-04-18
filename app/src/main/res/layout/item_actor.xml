@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
@@ -11,9 +11,21 @@
     <android.support.constraint.ConstraintLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp">
+
+     <!--   <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="126dp"
+            android:layout_height="166dp"
+            android:background="@android:color/darker_gray"
+            android:scaleType="fitCenter"
+            bind:imageUrl="${movies.imageurl}"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="7dp" />-->
 
         <TextView
             android:id="@+id/textName"

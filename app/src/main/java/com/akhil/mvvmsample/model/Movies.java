@@ -1,6 +1,10 @@
 package com.akhil.mvvmsample.model;
 
+import android.databinding.BindingAdapter;
+import android.widget.ImageView;
+
 import com.google.gson.annotations.SerializedName;
+import com.squareup.picasso.Picasso;
 
 /**
  * Created by Akhil on 08-04-2018.
@@ -28,6 +32,14 @@ public class Movies {
 
     @SerializedName("imageurl")
     private String imageurl;
+
+
+    @BindingAdapter({"imageUrl"})
+    public static void loadImage(ImageView view, String imageUrl) {
+        Picasso.with(view.getContext())
+                .load(imageUrl)
+                .into(view);
+    }
 
     @SerializedName("bio")
     private String bio;

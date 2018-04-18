@@ -34,7 +34,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ItemHolder> {
     public void onBindViewHolder(ItemHolder holder, int position) {
         Movies movies = mMoviesList.get(position);
         holder.binding.setMovies(movies);
-        // Picasso.with(holder.itemView.getContext()).load(movies.getImageurl()).into(holder.mActorImg);
     }
 
     @Override
